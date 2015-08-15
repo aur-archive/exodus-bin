@@ -1,0 +1,21 @@
+post_install() {
+	echo ">>> You must register an account on the official Second Life"
+	echo ">>>  website in order to play Second Life."
+	echo ">>>"
+	echo ">>>  http://www.secondlife.com/"
+	echo ">>>"
+}
+
+post_upgrade() {
+	echo ">>> Please clear your cache before logging in, or you will encounter issues."
+	echo ">>> You may do this through Edit->Preferences and the Advanced tab."
+}
+
+pre_remove() {
+	/bin/true
+}
+
+op=$1
+shift
+
+$op $*
